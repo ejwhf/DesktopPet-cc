@@ -1,0 +1,37 @@
+DesktopPet NaturalMotion Blink Pixel Diff Report
+================================================
+06 SHA-256: 79EDF1E5F30DC16E594AFB0C345266F4BF70F2D68C7020B82D716E4A3B651931
+screen-left ROI: (213, 197, 264, 246); center=(238,221)
+screen-right ROI: (257, 187, 306, 234); center=(281,210)
+05 usage: closure curvature/direction reference only; no 05 pixels are copied.
+05 shared-rigid residuals: {'screen-left': 5.992263909727732, 'screen-right': 5.992263909727732}
+
+[40]
+overlay size: 512x512
+overlay non-transparent pixels: 730
+overlay bounds: (218, 193, 301, 223)
+composite changed pixels: 672
+composite changed bounds: (218, 193, 301, 223)
+outside Eye ROI changed pixels: 0
+outside measured eye interiors changed pixels: 0
+protected glasses changed pixels: 0
+
+[75]
+overlay size: 512x512
+overlay non-transparent pixels: 1584
+overlay bounds: (218, 193, 301, 240)
+composite changed pixels: 1473
+composite changed bounds: (218, 193, 301, 240)
+outside Eye ROI changed pixels: 0
+outside measured eye interiors changed pixels: 0
+protected glasses changed pixels: 0
+
+[closed]
+overlay size: 512x512
+overlay non-transparent pixels: 2254
+overlay bounds: (218, 193, 301, 240)
+composite changed pixels: 2254
+composite changed bounds: (218, 193, 301, 240)
+outside Eye ROI changed pixels: 0
+outside measured eye interiors changed pixels: 0
+protected glasses changed pixels: 0

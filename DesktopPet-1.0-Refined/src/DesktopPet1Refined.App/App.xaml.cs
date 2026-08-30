@@ -1,8 +1,7 @@
 using System.IO;
 using System.Windows;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using DesktopPet1Refined.App.Models;
+using DesktopPet1Refined.App.NaturalMotion;
 using DesktopPet1Refined.App.Services;
 
 namespace DesktopPet1Refined.App;
@@ -14,7 +13,7 @@ public partial class App : System.Windows.Application
     private SingleInstanceCoordinator? _singleInstance;
     private TrayIconService? _trayIcon;
     private MainWindow? _petWindow;
-    private IdleAnimationPlayer? _idleAnimation;
+    private NaturalMotionCoordinator? _naturalMotion;
     private AppSettings _settings = new();
     private bool _isShuttingDown;
 
@@ -44,6 +43,8 @@ public partial class App : System.Windows.Application
         {
             WriteStartupError(exception);
             _isShuttingDown = true;
+            _naturalMotion?.Dispose();
+            _naturalMotion = null;
             _trayIcon?.Dispose();
             _trayIcon = null;
             if (_petWindow is not null)
@@ -80,108 +81,26 @@ public partial class App : System.Windows.Application
         ApplySettings(_settings);
         _petWindow.RestorePlacement(_settings.Left, _settings.Top, _settings.MonitorId);
 
-        _trayIcon = new TrayIconService(
-            _petWindow,
-            () => _settings,
-            UpdateSettings,
-            RequestExit);
-
-        // The image control is still collapsed here. The transparent window is shown first so a
-        // decode failure can never expose a placeholder, designer image, or stale bitmap.
+        // The image remains collapsed while the transparent shell is first shown. The only startup
+        // pose is then resolved through pose-profiles.json and validated before it becomes visible.
         _petWindow.Show();
         await System.Windows.Threading.Dispatcher.Yield(
             System.Windows.Threading.DispatcherPriority.Background);
 
-        try
-        {
-            var neutral = LoadApprovedFrame("idle.neutral.png");
-            _petWindow.SetStaticFrame(neutral.Image, neutral.AlphaPixels);
-            try
-            {
-                var alternate = LoadApprovedFrame("idle.alt.png");
-                var closedSmile = LoadApprovedFrame("idle.blink_smile.png");
-                _idleAnimation = new IdleAnimationPlayer(
-                    _petWindow,
-                    neutral,
-                    alternate,
-                    closedSmile);
-                _idleAnimation.SetEnabled(_settings.IdleAnimationEnabled);
-            }
-            catch (Exception animationException) when (animationException is
-                IOException or UnauthorizedAccessException or NotSupportedException)
-            {
-                // The already validated neutral pose stays visible if an optional animation frame
-                // is absent or invalid. No placeholder image is ever selected.
-                WriteStartupError(animationException);
-            }
-        }
-        catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or NotSupportedException)
-        {
-            WriteStartupError(exception);
-        }
-    }
+        _naturalMotion = new NaturalMotionCoordinator(_petWindow);
+        _naturalMotion.ShowStaticBasePose();
+        _naturalMotion.SetReduceMotion(_settings.ReduceMotion);
 
-    private static ApprovedFrame LoadApprovedFrame(string fileName)
-    {
-        if (fileName is not ("idle.neutral.png" or "idle.alt.png" or "idle.blink_smile.png"))
-        {
-            throw new InvalidDataException($"Frame '{fileName}' is not in the idle animation whitelist.");
-        }
-
-        var path = Path.GetFullPath(Path.Combine(
-            AppContext.BaseDirectory,
-            "assets",
-            "sprites",
-            fileName));
-        if (!File.Exists(path))
-        {
-            throw new FileNotFoundException($"The approved frame '{fileName}' is missing.", path);
-        }
-
-        BitmapFrame decoded;
-        using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read))
-        {
-            var decoder = BitmapDecoder.Create(
-                stream,
-                BitmapCreateOptions.PreservePixelFormat,
-                BitmapCacheOption.OnLoad);
-            if (decoder.Frames.Count != 1)
-            {
-                throw new InvalidDataException($"The approved frame '{fileName}' must contain exactly one PNG frame.");
-            }
-
-            decoded = decoder.Frames[0];
-        }
-
-        if (decoded.PixelWidth != 512 || decoded.PixelHeight != 512)
-        {
-            throw new InvalidDataException(
-                $"The approved frame '{fileName}' must be 512x512; found {decoded.PixelWidth}x{decoded.PixelHeight}.");
-        }
-
-        var converted = new FormatConvertedBitmap(decoded, PixelFormats.Bgra32, null, 0);
-        converted.Freeze();
-        var stride = converted.PixelWidth * 4;
-        var pixels = new byte[stride * converted.PixelHeight];
-        converted.CopyPixels(pixels, stride, 0);
-        var alpha = new byte[converted.PixelWidth * converted.PixelHeight];
-        var opaqueCount = 0;
-        for (var index = 0; index < alpha.Length; index++)
-        {
-            var value = pixels[(index * 4) + 3];
-            alpha[index] = value;
-            if (value >= 16)
-            {
-                opaqueCount++;
-            }
-        }
-
-        if (opaqueCount == 0 || opaqueCount == alpha.Length)
-        {
-            throw new InvalidDataException($"The approved frame '{fileName}' has an invalid transparency plane.");
-        }
-
-        return new ApprovedFrame(converted, alpha);
+        _trayIcon = new TrayIconService(
+            _petWindow,
+            () => _settings,
+            UpdateSettings,
+            _naturalMotion.OpenPreview,
+            _naturalMotion.OpenBlinkDebug,
+            _naturalMotion.TriggerBlink,
+            _naturalMotion.MotionIds,
+            _naturalMotion.PlayDebugMotion,
+            RequestExit);
     }
 
     private void UpdateSettings(AppSettings settings)
@@ -199,7 +118,7 @@ public partial class App : System.Windows.Application
             settings.AlwaysOnTop,
             settings.LockPosition);
         _petWindow?.SetHitTestMode(settings.HitTestMode);
-        _idleAnimation?.SetEnabled(settings.IdleAnimationEnabled);
+        _naturalMotion?.SetReduceMotion(settings.ReduceMotion);
         _trayIcon?.RefreshChecks(settings);
     }
 
@@ -268,8 +187,8 @@ public partial class App : System.Windows.Application
         }
 
         await SaveSettingsAsync();
-        _idleAnimation?.Dispose();
-        _idleAnimation = null;
+        _naturalMotion?.Dispose();
+        _naturalMotion = null;
         _trayIcon?.Dispose();
         _trayIcon = null;
         _petWindow?.Close();
@@ -296,7 +215,7 @@ public partial class App : System.Windows.Application
     protected override void OnExit(ExitEventArgs e)
     {
         _trayIcon?.Dispose();
-        _idleAnimation?.Dispose();
+        _naturalMotion?.Dispose();
         if (_singleInstance is not null)
         {
             _singleInstance.ActivationRequested -= OnActivationRequested;
@@ -305,87 +224,5 @@ public partial class App : System.Windows.Application
 
         _settingsSaveGate.Dispose();
         base.OnExit(e);
-    }
-
-    private sealed record ApprovedFrame(BitmapSource Image, byte[] AlphaPixels);
-
-    private sealed class IdleAnimationPlayer : IDisposable
-    {
-        private readonly MainWindow _window;
-        private readonly AnimationStep[] _steps;
-        private readonly ApprovedFrame _neutral;
-        private readonly System.Windows.Threading.DispatcherTimer _timer;
-        private int _stepIndex;
-        private bool _enabled;
-
-        public IdleAnimationPlayer(
-            MainWindow window,
-            ApprovedFrame neutral,
-            ApprovedFrame alternate,
-            ApprovedFrame closedSmile)
-        {
-            _window = window;
-            _neutral = neutral;
-            // This is the original 1.0 idle order and timing, but without any whole-character
-            // scaling. Every step swaps one complete, approved 512x512 source frame.
-            _steps =
-            [
-                new AnimationStep(neutral, 1_600),
-                new AnimationStep(alternate, 1_200),
-                new AnimationStep(closedSmile, 220),
-                new AnimationStep(neutral, 1_400)
-            ];
-            _timer = new System.Windows.Threading.DispatcherTimer(
-                System.Windows.Threading.DispatcherPriority.Render,
-                window.Dispatcher);
-            _timer.Tick += OnTick;
-        }
-
-        public void SetEnabled(bool enabled)
-        {
-            if (_enabled == enabled)
-            {
-                return;
-            }
-
-            _enabled = enabled;
-            _timer.Stop();
-            if (!enabled)
-            {
-                _window.SetStaticFrame(_neutral.Image, _neutral.AlphaPixels);
-                return;
-            }
-
-            _stepIndex = 0;
-            ShowCurrentStep();
-        }
-
-        private void OnTick(object? sender, EventArgs e)
-        {
-            _timer.Stop();
-            if (!_enabled)
-            {
-                return;
-            }
-
-            _stepIndex = (_stepIndex + 1) % _steps.Length;
-            ShowCurrentStep();
-        }
-
-        private void ShowCurrentStep()
-        {
-            var step = _steps[_stepIndex];
-            _window.SetStaticFrame(step.Frame.Image, step.Frame.AlphaPixels);
-            _timer.Interval = TimeSpan.FromMilliseconds(step.DurationMs);
-            _timer.Start();
-        }
-
-        public void Dispose()
-        {
-            _timer.Stop();
-            _timer.Tick -= OnTick;
-        }
-
-        private sealed record AnimationStep(ApprovedFrame Frame, int DurationMs);
     }
 }

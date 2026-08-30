@@ -1,0 +1,187 @@
+{
+  "canvas": [
+    512,
+    512
+  ],
+  "files": {
+    "06": {
+      "path": "DesktopPet-1.0-Refined\\assets\\sprites\\idle.neutral.png",
+      "sha256": "79EDF1E5F30DC16E594AFB0C345266F4BF70F2D68C7020B82D716E4A3B651931",
+      "alphaBounds": [
+        172,
+        124,
+        340,
+        464
+      ]
+    },
+    "05": {
+      "path": "DesktopPet-1.0-Refined\\assets\\sprites\\idle.blink_smile.png",
+      "sha256": "EA6F9979B28AD5AD06BE4B317BAB4AC2804EE36F5947F9270C9E1C18A218A00B",
+      "alphaBounds": [
+        168,
+        124,
+        343,
+        464
+      ]
+    },
+    "07": {
+      "path": "DesktopPet-1.0-Refined\\assets\\sprites\\idle.alt.png",
+      "sha256": "C723F38EE331CA2DEB461BFF7256BD43F8F42491397E205399FC959DC48BB47B",
+      "alphaBounds": [
+        172,
+        124,
+        340,
+        464
+      ]
+    }
+  },
+  "faceSearch": [
+    196,
+    168,
+    316,
+    260
+  ],
+  "eyes": [
+    {
+      "name": "screen-left",
+      "center_x": 238,
+      "center_y": 221,
+      "radius_x": 21,
+      "radius_y": 19,
+      "closure_y": 222,
+      "closure_arc": 5.0,
+      "closure_tilt": 2.0,
+      "roi": [
+        213,
+        197,
+        264,
+        246
+      ]
+    },
+    {
+      "name": "screen-right",
+      "center_x": 281,
+      "center_y": 210,
+      "radius_x": 20,
+      "radius_y": 18,
+      "closure_y": 211,
+      "closure_arc": 4.0,
+      "closure_tilt": 1.0,
+      "roi": [
+        257,
+        187,
+        306,
+        234
+      ]
+    }
+  ],
+  "glassesReferencePoints": {
+    "screenLeftOuter": [
+      211,
+      218
+    ],
+    "screenLeftTop": [
+      238,
+      197
+    ],
+    "screenLeftBridge": [
+      262,
+      209
+    ],
+    "screenLeftBottom": [
+      238,
+      245
+    ],
+    "screenRightBridge": [
+      258,
+      203
+    ],
+    "screenRightTop": [
+      281,
+      187
+    ],
+    "screenRightOuter": [
+      307,
+      207
+    ],
+    "screenRightBottom": [
+      281,
+      233
+    ],
+    "noseBridge": [
+      260,
+      222
+    ]
+  },
+  "darknessCandidates06": [
+    {
+      "x": 238,
+      "y": 221,
+      "score": 109.37410736083984
+    },
+    {
+      "x": 281,
+      "y": 210,
+      "score": 96.24832916259766
+    },
+    {
+      "x": 237,
+      "y": 188,
+      "score": 66.9843521118164
+    },
+    {
+      "x": 303,
+      "y": 192,
+      "score": 44.059669494628906
+    },
+    {
+      "x": 289,
+      "y": 247,
+      "score": 40.96958923339844
+    },
+    {
+      "x": 303,
+      "y": 210,
+      "score": 39.45154571533203
+    },
+    {
+      "x": 281,
+      "y": 185,
+      "score": 38.71567153930664
+    },
+    {
+      "x": 222,
+      "y": 199,
+      "score": 36.80708312988281
+    }
+  ],
+  "closed05ReferenceCenters": {
+    "screen-left": [
+      228.39331861313866,
+      227.1449283194084
+    ],
+    "screen-right": [
+      282.8420214134769,
+      212.60146797042339
+    ]
+  },
+  "closed05To06TargetDeltas": {
+    "screen-left": [
+      -9.60668138686134,
+      5.144928319408393
+    ],
+    "screen-right": [
+      1.842021413476914,
+      1.6014679704233856
+    ]
+  },
+  "bestSharedRigidTranslation": [
+    -3.8823299866922127,
+    3.3731981449158894
+  ],
+  "rigidAlignmentResidualPixels": {
+    "screen-left": 5.992263909727732,
+    "screen-right": 5.992263909727732
+  },
+  "use05": "shape-reference-only"
+}

@@ -10,14 +10,21 @@
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
     <AssemblyName>DesktopPet1Refined</AssemblyName>
     <RootNamespace>DesktopPet1Refined.App</RootNamespace>
-    <Version>0.1.2</Version>
+    <Version>0.0.1</Version>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <NoWarn>$(NoWarn);WFAC010</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="..\..\assets\sprites\idle.*.png"
-             Link="assets\sprites\%(Filename)%(Extension)"
+    <ProjectReference Include="..\DesktopPet1Refined.NaturalMotion\DesktopPet1Refined.NaturalMotion.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\assets\sprites\idle.neutral.png"
+             Link="assets\sprites\idle.neutral.png"
+             CopyToOutputDirectory="PreserveNewest"
+             CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="..\..\assets\natural-motion\**\*"
+             Link="assets\natural-motion\%(RecursiveDir)%(Filename)%(Extension)"
              CopyToOutputDirectory="PreserveNewest"
              CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>

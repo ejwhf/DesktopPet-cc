@@ -1,7 +1,7 @@
 <Window x:Class="DesktopPet1Refined.App.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="桌宠 1.0 Refined"
+        Title="桌宠 1.0 Refined · NaturalMotion Preview"
         Width="300"
         Height="360"
         MinWidth="120"
@@ -16,11 +16,31 @@
         SnapsToDevicePixels="True"
         UseLayoutRounding="True">
     <Grid Background="Transparent">
-        <Image x:Name="PetImage"
-               Margin="12"
-               Stretch="Uniform"
-               RenderOptions.BitmapScalingMode="HighQuality"
-               Visibility="Collapsed" />
+        <Viewbox x:Name="PetViewport" Margin="12" Stretch="Uniform">
+            <Grid Width="512" Height="512">
+                <Image x:Name="PetImage"
+                       Width="512"
+                       Height="512"
+                       Stretch="Fill"
+                       RenderOptions.BitmapScalingMode="HighQuality"
+                       Visibility="Collapsed" />
+                <Image x:Name="BlinkOverlayImage"
+                       Width="512"
+                       Height="512"
+                       Stretch="Fill"
+                       RenderOptions.BitmapScalingMode="HighQuality"
+                       IsHitTestVisible="False"
+                       Visibility="Collapsed" />
+                <Canvas x:Name="MotionLayerCanvas"
+                        Width="512"
+                        Height="512"
+                        IsHitTestVisible="False" />
+                <Canvas x:Name="MotionDebugCanvas"
+                        Width="512"
+                        Height="512"
+                        IsHitTestVisible="False" />
+            </Grid>
+        </Viewbox>
 
         <Border x:Name="RecoveryHint"
                 HorizontalAlignment="Center"

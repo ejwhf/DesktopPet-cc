@@ -9,7 +9,7 @@ public enum HitTestMode
 
 internal sealed record AppSettings
 {
-    public int SchemaVersion { get; init; } = 1;
+    public int SchemaVersion { get; init; } = 3;
 
     public double Scale { get; init; } = 1;
 
@@ -19,7 +19,7 @@ internal sealed record AppSettings
 
     public bool LockPosition { get; init; }
 
-    public bool IdleAnimationEnabled { get; init; } = true;
+    public bool ReduceMotion { get; init; }
 
     public HitTestMode HitTestMode { get; init; } = HitTestMode.CharacterPixels;
 
@@ -31,7 +31,7 @@ internal sealed record AppSettings
 
     public AppSettings Normalize() => this with
     {
-        SchemaVersion = 1,
+        SchemaVersion = 3,
         Scale = double.IsFinite(Scale) ? Math.Clamp(Scale, 0.5, 2) : 1,
         Opacity = double.IsFinite(Opacity) ? Math.Clamp(Opacity, 0.2, 1) : 1,
         Left = Left is { } left && double.IsFinite(left) ? left : null,

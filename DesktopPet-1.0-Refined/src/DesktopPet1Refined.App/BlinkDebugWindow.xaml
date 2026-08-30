@@ -1,0 +1,65 @@
+<Window x:Class="DesktopPet1Refined.App.BlinkDebugWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Idle Blink Debug"
+        Width="920" Height="700" MinWidth="820" MinHeight="620"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="16">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="280" />
+        </Grid.ColumnDefinitions>
+        <Border x:Name="PreviewBackground" Grid.Column="0" Margin="0,0,16,0"
+                Background="#FFE8E8E8" BorderBrush="#FF666666" BorderThickness="1">
+            <Viewbox Stretch="Uniform">
+                <Grid Width="512" Height="512">
+                    <Image x:Name="BaseImage" Width="512" Height="512" Stretch="Fill"
+                           RenderOptions.BitmapScalingMode="HighQuality" />
+                    <Image x:Name="BlinkImage" Width="512" Height="512" Stretch="Fill"
+                           RenderOptions.BitmapScalingMode="HighQuality" IsHitTestVisible="False" />
+                    <Canvas x:Name="RoiCanvas" Width="512" Height="512" IsHitTestVisible="False"
+                            Visibility="Collapsed">
+                        <Rectangle Canvas.Left="213" Canvas.Top="197" Width="51" Height="49"
+                                   Stroke="#FF00DCFF" StrokeThickness="2" />
+                        <Rectangle Canvas.Left="257" Canvas.Top="187" Width="49" Height="47"
+                                   Stroke="#FFFF50B4" StrokeThickness="2" />
+                    </Canvas>
+                </Grid>
+            </Viewbox>
+        </Border>
+        <StackPanel Grid.Column="1">
+            <TextBlock FontSize="19" FontWeight="SemiBold" Text="Idle · Blink Debug" />
+            <TextBlock Margin="0,4,0,16" Foreground="#FF555555" TextWrapping="Wrap"
+                       Text="仅预览 06 底图上的双眼同步眨眼；不会播放其他动作。" />
+            <UniformGrid Columns="3" Margin="0,0,0,12">
+                <Button Margin="2" Padding="6" Click="OnTrigger" Content="Trigger" />
+                <Button Margin="2" Padding="6" Click="OnPause" Content="Pause" />
+                <Button Margin="2" Padding="6" Click="OnRestart" Content="Restart" />
+            </UniformGrid>
+            <TextBlock FontWeight="SemiBold" Text="固定帧" />
+            <UniformGrid Columns="2" Margin="0,6,0,12">
+                <Button Margin="2" Padding="6" Click="OnShowOpen" Content="Open" />
+                <Button Margin="2" Padding="6" Click="OnShow40" Content="40%" />
+                <Button Margin="2" Padding="6" Click="OnShow75" Content="75%" />
+                <Button Margin="2" Padding="6" Click="OnShowClosed" Content="Closed" />
+            </UniformGrid>
+            <TextBlock FontWeight="SemiBold" Text="速度" />
+            <ComboBox x:Name="SpeedSelector" Margin="0,6,0,12" SelectionChanged="OnSpeedChanged">
+                <ComboBoxItem Tag="0.25">0.25×</ComboBoxItem>
+                <ComboBoxItem Tag="0.5">0.5×</ComboBoxItem>
+                <ComboBoxItem Tag="1" IsSelected="True">1×</ComboBoxItem>
+            </ComboBox>
+            <TextBlock FontWeight="SemiBold" Text="背景" />
+            <ComboBox x:Name="BackgroundSelector" Margin="0,6,0,12" SelectionChanged="OnBackgroundChanged">
+                <ComboBoxItem Tag="normal" IsSelected="True">正常</ComboBoxItem>
+                <ComboBoxItem Tag="light">浅色</ComboBoxItem>
+                <ComboBoxItem Tag="dark">深色</ComboBoxItem>
+            </ComboBox>
+            <CheckBox x:Name="RoiToggle" Margin="0,3" Checked="OnRoiChanged" Unchecked="OnRoiChanged"
+                      Content="显示 Eye ROI" />
+            <Border Margin="0,16,0,0" Padding="10" Background="#FFF2F2F2" CornerRadius="4">
+                <TextBlock x:Name="StatusText" TextWrapping="Wrap" />
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>

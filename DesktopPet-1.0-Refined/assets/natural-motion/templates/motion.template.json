@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "replace-with-action-id",
+  "basePose": "06_idle",
+  "durationMs": 1000,
+  "loopMode": "once",
+  "targets": [
+    {
+      "id": "replace-with-layer-id",
+      "kind": "layer",
+      "source": "natural-motion/rigs/replace-with-action-id/layer.png",
+      "bounds": { "x": 0, "y": 0, "width": 64, "height": 64 },
+      "anchor": { "x": 0, "y": 0 },
+      "pivot": { "x": 32, "y": 32 },
+      "zIndex": 10
+    }
+  ],
+  "tracks": [
+    {
+      "target": "replace-with-layer-id",
+      "property": "rotate",
+      "keyframes": [
+        { "timeMs": 0, "value": 0, "easing": "linear" },
+        { "timeMs": 1000, "value": 0, "easing": "easeInOut" }
+      ]
+    }
+  ],
+  "interruptPolicy": "immediate",
+  "exitPolicy": "restoreBasePose"
+}

@@ -1,0 +1,74 @@
+<Window x:Class="DesktopPet1Refined.App.MotionPreviewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NaturalMotion Debug Preview"
+        Width="960"
+        Height="720"
+        MinWidth="820"
+        MinHeight="620"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="16">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="280" />
+        </Grid.ColumnDefinitions>
+
+        <Border x:Name="PreviewBackground"
+                Grid.Column="0"
+                Margin="0,0,16,0"
+                Background="#FFE8E8E8"
+                BorderBrush="#FF666666"
+                BorderThickness="1">
+            <Viewbox Stretch="Uniform">
+                <Grid x:Name="PreviewMotionRoot" Width="512" Height="512">
+                    <Image x:Name="PreviewPoseImage"
+                           Width="512"
+                           Height="512"
+                           Stretch="Fill"
+                           RenderOptions.BitmapScalingMode="HighQuality" />
+                    <Canvas x:Name="PreviewLayerCanvas" Width="512" Height="512" IsHitTestVisible="False" />
+                    <Canvas x:Name="PreviewDebugCanvas" Width="512" Height="512" IsHitTestVisible="False" />
+                </Grid>
+            </Viewbox>
+        </Border>
+
+        <StackPanel Grid.Column="1">
+            <TextBlock FontSize="19" FontWeight="SemiBold" Text="NaturalMotion Preview" />
+            <TextBlock Margin="0,4,0,16"
+                       Foreground="#FF555555"
+                       TextWrapping="Wrap"
+                       Text="这里只加载已通过素材检查的 Motion。当前阶段不会自动生成或接入人物动作。" />
+
+            <TextBlock FontWeight="SemiBold" Text="Motion" />
+            <ListBox x:Name="MotionList" Height="150" Margin="0,6,0,12" SelectionChanged="OnMotionSelectionChanged" />
+
+            <UniformGrid Columns="3" Margin="0,0,0,12">
+                <Button x:Name="PlayButton" Margin="2" Padding="6" Click="OnPlay" Content="Play" />
+                <Button x:Name="PauseButton" Margin="2" Padding="6" Click="OnPause" Content="Pause" />
+                <Button x:Name="RestartButton" Margin="2" Padding="6" Click="OnRestart" Content="Restart" />
+            </UniformGrid>
+
+            <TextBlock FontWeight="SemiBold" Text="速度" />
+            <ComboBox x:Name="SpeedSelector" Margin="0,6,0,12" SelectionChanged="OnSpeedChanged">
+                <ComboBoxItem Tag="0.25">0.25×</ComboBoxItem>
+                <ComboBoxItem Tag="0.5">0.5×</ComboBoxItem>
+                <ComboBoxItem Tag="1" IsSelected="True">1×</ComboBoxItem>
+            </ComboBox>
+
+            <TextBlock FontWeight="SemiBold" Text="背景" />
+            <ComboBox x:Name="BackgroundSelector" Margin="0,6,0,12" SelectionChanged="OnBackgroundChanged">
+                <ComboBoxItem Tag="normal" IsSelected="True">正常</ComboBoxItem>
+                <ComboBoxItem Tag="light">浅色</ComboBoxItem>
+                <ComboBoxItem Tag="dark">深色</ComboBoxItem>
+            </ComboBox>
+
+            <CheckBox x:Name="PivotToggle" Margin="0,3" Checked="OnOverlayChanged" Unchecked="OnOverlayChanged" Content="显示 Pivot" />
+            <CheckBox x:Name="AnchorToggle" Margin="0,3" Checked="OnOverlayChanged" Unchecked="OnOverlayChanged" Content="显示 Anchor" />
+            <CheckBox x:Name="BoundsToggle" Margin="0,3" Checked="OnOverlayChanged" Unchecked="OnOverlayChanged" Content="显示 Bounds" />
+
+            <Border Margin="0,16,0,0" Padding="10" Background="#FFF2F2F2" CornerRadius="4">
+                <TextBlock x:Name="StatusText" TextWrapping="Wrap" />
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>

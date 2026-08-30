@@ -1,5 +1,6 @@
 using System.ComponentModel;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
@@ -26,6 +27,9 @@ public partial class MainWindow : Window
     private bool _allowClose;
     private bool _isDragging;
     private bool _alwaysOnTop = true;
+    private bool _isWindowMotionActive;
+    private double _windowMotionBaseLeft;
+    private double _windowMotionBaseTop;
 
     public MainWindow()
     {
@@ -60,6 +64,14 @@ public partial class MainWindow : Window
 
     public event EventHandler<HitTestMode>? HitTestModeChanged;
 
+    public event EventHandler? DragStarted;
+
+    public event EventHandler? DragCompleted;
+
+    internal Canvas MotionLayerCanvasElement => MotionLayerCanvas;
+
+    internal Canvas MotionDebugCanvasElement => MotionDebugCanvas;
+
     public void SetStaticFrame(BitmapSource image, byte[] alphaPixels)
     {
         ArgumentNullException.ThrowIfNull(image);
@@ -75,6 +87,16 @@ public partial class MainWindow : Window
         _pixelHeight = image.PixelHeight;
         PetImage.Source = image;
         PetImage.Visibility = Visibility.Visible;
+    }
+
+    public void SetBlinkOverlay(BitmapSource? image)
+    {
+        if (image is not null && (image.PixelWidth != 512 || image.PixelHeight != 512))
+        {
+            throw new ArgumentException("Blink overlays must be full-canvas 512x512 images.", nameof(image));
+        }
+        BlinkOverlayImage.Source = image;
+        BlinkOverlayImage.Visibility = image is null ? Visibility.Collapsed : Visibility.Visible;
     }
 
     public void ApplyDisplaySettings(double scale, double opacity, bool alwaysOnTop, bool lockPosition)
@@ -148,6 +170,43 @@ public partial class MainWindow : Window
 
     public void AllowClose() => _allowClose = true;
 
+    public void BeginWindowMotion()
+    {
+        if (_isWindowMotionActive)
+        {
+            return;
+        }
+        _isWindowMotionActive = true;
+        _windowMotionBaseLeft = Left;
+        _windowMotionBaseTop = Top;
+    }
+
+    public void ApplyWindowMotionOffset(double offsetX, double offsetY)
+    {
+        if (!_isWindowMotionActive || !double.IsFinite(offsetX) || !double.IsFinite(offsetY))
+        {
+            return;
+        }
+        Left = _windowMotionBaseLeft + offsetX;
+        Top = _windowMotionBaseTop + offsetY;
+    }
+
+    public void EndWindowMotion(bool restoreBasePosition)
+    {
+        if (!_isWindowMotionActive)
+        {
+            return;
+        }
+        if (restoreBasePosition)
+        {
+            Left = _windowMotionBaseLeft;
+            Top = _windowMotionBaseTop;
+        }
+        _isWindowMotionActive = false;
+        ClampToVisibleDesktop();
+        RaisePlacementChanged();
+    }
+
     private void SetDefaultPlacement()
     {
         Left = SystemParameters.WorkArea.Right - Math.Max(Width, 300) - 24;
@@ -175,7 +234,7 @@ public partial class MainWindow : Window
 
     private void OnLocationChanged(object? sender, EventArgs e)
     {
-        if (!_isDragging && IsLoaded)
+        if (!_isDragging && !_isWindowMotionActive && IsLoaded)
         {
             _savePlacementTimer.Stop();
             _savePlacementTimer.Start();
@@ -197,6 +256,7 @@ public partial class MainWindow : Window
         }
 
         _isDragging = true;
+        DragStarted?.Invoke(this, EventArgs.Empty);
         try
         {
             DragMove();
@@ -210,6 +270,7 @@ public partial class MainWindow : Window
             _isDragging = false;
             ClampToVisibleDesktop();
             RaisePlacementChanged();
+            DragCompleted?.Invoke(this, EventArgs.Empty);
         }
     }
 
@@ -249,18 +310,18 @@ public partial class MainWindow : Window
             return false;
         }
 
-        var measured = PetImage.ActualWidth > 0 && PetImage.ActualHeight > 0;
+        var measured = PetViewport.ActualWidth > 0 && PetViewport.ActualHeight > 0;
         var topLeft = measured
-            ? PetImage.TranslatePoint(new WpfPoint(0, 0), this)
-            : new WpfPoint(PetImage.Margin.Left, PetImage.Margin.Top);
+            ? PetViewport.TranslatePoint(new WpfPoint(0, 0), this)
+            : new WpfPoint(PetViewport.Margin.Left, PetViewport.Margin.Top);
         var localX = windowPoint.X - topLeft.X;
         var localY = windowPoint.Y - topLeft.Y;
         var controlWidth = measured
-            ? PetImage.ActualWidth
-            : Math.Max(0, ActualWidth - PetImage.Margin.Left - PetImage.Margin.Right);
+            ? PetViewport.ActualWidth
+            : Math.Max(0, ActualWidth - PetViewport.Margin.Left - PetViewport.Margin.Right);
         var controlHeight = measured
-            ? PetImage.ActualHeight
-            : Math.Max(0, ActualHeight - PetImage.Margin.Top - PetImage.Margin.Bottom);
+            ? PetViewport.ActualHeight
+            : Math.Max(0, ActualHeight - PetViewport.Margin.Top - PetViewport.Margin.Bottom);
         if (controlWidth <= 0 || controlHeight <= 0 ||
             localX < 0 || localY < 0 || localX >= controlWidth || localY >= controlHeight)
         {

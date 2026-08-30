@@ -1,0 +1,21 @@
+{
+  "triggerCount": 100,
+  "completedBlinks": 100,
+  "gateChecks": [
+    "drag",
+    "action",
+    "hidden",
+    "reduce-motion"
+  ],
+  "framesSeen": [
+    "Forty",
+    "SeventyFive",
+    "Closed"
+  ],
+  "overlayInvariant": "512x512; margin=0; identity transform; Stretch.Fill",
+  "privateMemoryBeforeBytes": 49000448,
+  "privateMemoryAfterBytes": 56221696,
+  "threadCountBefore": 30,
+  "threadCountAfter": 34,
+  "result": "PASS"
+}

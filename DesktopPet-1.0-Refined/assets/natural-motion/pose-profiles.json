@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "poses": [
+    {
+      "poseId": "06_idle",
+      "file": "sprites/idle.neutral.png",
+      "canvasSize": {
+        "width": 512,
+        "height": 512
+      },
+      "visualBounds": {
+        "x": 172,
+        "y": 124,
+        "width": 168,
+        "height": 340
+      },
+      "headReference": null,
+      "bodyReference": null,
+      "footAnchor": {
+        "x": 256,
+        "y": 464
+      },
+      "seatAnchor": null,
+      "deskAnchor": null,
+      "displayOffsetX": 0,
+      "displayOffsetY": 0,
+      "hitTest": {
+        "source": "alpha",
+        "alphaThreshold": 16
+      }
+    }
+  ]
+}

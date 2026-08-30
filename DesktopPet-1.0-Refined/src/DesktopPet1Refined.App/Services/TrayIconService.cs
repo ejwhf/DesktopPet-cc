@@ -15,7 +15,7 @@ internal sealed class TrayIconService : IDisposable
     private readonly Dictionary<HitTestMode, Forms.ToolStripMenuItem> _hitTestItems = new();
     private Forms.ToolStripMenuItem _alwaysOnTopItem = null!;
     private Forms.ToolStripMenuItem _lockPositionItem = null!;
-    private Forms.ToolStripMenuItem _idleAnimationItem = null!;
+    private Forms.ToolStripMenuItem _reduceMotionItem = null!;
     private bool _refreshing;
     private bool _disposed;
 
@@ -23,6 +23,11 @@ internal sealed class TrayIconService : IDisposable
         MainWindow window,
         Func<AppSettings> getSettings,
         Action<AppSettings> applySettings,
+        Action openMotionPreview,
+        Action openBlinkDebug,
+        Action triggerBlink,
+        IReadOnlyList<string> debugMotionIds,
+        Action<string> playDebugMotion,
         Action requestExit)
     {
         _window = window;
@@ -31,9 +36,24 @@ internal sealed class TrayIconService : IDisposable
 
         var menu = new Forms.ContextMenuStrip();
         menu.Items.Add(CreateItem("恢复桌宠 (&R)", (_, _) => _window.RecoverControl()));
-        _idleAnimationItem = CreateCheckItem("播放待机动画", (_, _) =>
-            Change(_getSettings() with { IdleAnimationEnabled = _idleAnimationItem.Checked }));
-        menu.Items.Add(_idleAnimationItem);
+        var debugMenu = new Forms.ToolStripMenuItem("NaturalMotion 调试");
+        debugMenu.DropDownItems.Add(CreateItem("打开独立 Preview...", (_, _) => openMotionPreview()));
+        debugMenu.DropDownItems.Add(CreateItem("打开 Idle 眨眼调试...", (_, _) => openBlinkDebug()));
+        debugMenu.DropDownItems.Add(CreateItem("手动触发一次眨眼", (_, _) => triggerBlink()));
+        if (debugMotionIds.Count > 0)
+        {
+            debugMenu.DropDownItems.Add(new Forms.ToolStripSeparator());
+            foreach (var motionId in debugMotionIds)
+            {
+                var capturedId = motionId;
+                debugMenu.DropDownItems.Add(CreateItem($"手动播放：{capturedId}", (_, _) => playDebugMotion(capturedId)));
+            }
+        }
+        else
+        {
+            debugMenu.DropDownItems.Add(new Forms.ToolStripMenuItem("暂无正式动作") { Enabled = false });
+        }
+        menu.Items.Add(debugMenu);
         menu.Items.Add(new Forms.ToolStripSeparator());
 
         var scaleMenu = new Forms.ToolStripMenuItem("大小");
@@ -59,8 +79,11 @@ internal sealed class TrayIconService : IDisposable
             Change(_getSettings() with { AlwaysOnTop = _alwaysOnTopItem.Checked }));
         _lockPositionItem = CreateCheckItem("锁定位置", (_, _) =>
             Change(_getSettings() with { LockPosition = _lockPositionItem.Checked }));
+        _reduceMotionItem = CreateCheckItem("减少动态效果", (_, _) =>
+            Change(_getSettings() with { ReduceMotion = _reduceMotionItem.Checked }));
         menu.Items.Add(_alwaysOnTopItem);
         menu.Items.Add(_lockPositionItem);
+        menu.Items.Add(_reduceMotionItem);
 
         var hitTestMenu = new Forms.ToolStripMenuItem("点击区域");
         AddHitTestItem(hitTestMenu, "仅人物像素", HitTestMode.CharacterPixels);
@@ -76,7 +99,7 @@ internal sealed class TrayIconService : IDisposable
         {
             ContextMenuStrip = menu,
             Icon = (DrawingIcon)System.Drawing.SystemIcons.Application.Clone(),
-            Text = "桌宠 1.0 Refined · 待机动画",
+            Text = "桌宠 Refined · NaturalMotion Preview",
             Visible = true
         };
         _notifyIcon.DoubleClick += (_, _) => _window.RecoverControl();
@@ -103,7 +126,7 @@ internal sealed class TrayIconService : IDisposable
 
             _alwaysOnTopItem.Checked = settings.AlwaysOnTop;
             _lockPositionItem.Checked = settings.LockPosition;
-            _idleAnimationItem.Checked = settings.IdleAnimationEnabled;
+            _reduceMotionItem.Checked = settings.ReduceMotion;
         }
         finally
         {
