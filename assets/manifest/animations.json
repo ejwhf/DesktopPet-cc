@@ -1,0 +1,2711 @@
+{
+  "schemaVersion": 1,
+  "canvasSize": [
+    512,
+    512
+  ],
+  "defaultFrameDurationMs": 83,
+  "frameCount": 160,
+  "clips": [
+    {
+      "id": "boot.enter",
+      "loop": false,
+      "fallbackPoseId": "peek.screen_left",
+      "frames": [
+        {
+          "file": "animations/boot.enter/000.png",
+          "durationMs": 83,
+          "visualBounds": [
+            48,
+            124,
+            159,
+            340
+          ],
+          "anchor": [
+            0.2490234375,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "peek.screen_left"
+        },
+        {
+          "file": "animations/boot.enter/001.png",
+          "durationMs": 83,
+          "visualBounds": [
+            48,
+            124,
+            159,
+            340
+          ],
+          "anchor": [
+            0.2490234375,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "peek.screen_left"
+        },
+        {
+          "file": "animations/boot.enter/002.png",
+          "durationMs": 83,
+          "visualBounds": [
+            48,
+            124,
+            159,
+            340
+          ],
+          "anchor": [
+            0.2490234375,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "peek.screen_left"
+        },
+        {
+          "file": "animations/boot.enter/003.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/boot.enter/004.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/boot.enter/005.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/boot.enter/006.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/boot.enter/007.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "idle.neutral"
+        }
+      ]
+    },
+    {
+      "id": "idle.loop",
+      "loop": true,
+      "fallbackPoseId": "idle.neutral",
+      "frames": [
+        {
+          "file": "animations/idle.loop/000.png",
+          "durationMs": 500,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/idle.loop/001.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.alt"
+        },
+        {
+          "file": "animations/idle.loop/002.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/idle.loop/003.png",
+          "durationMs": 167,
+          "visualBounds": [
+            168,
+            124,
+            175,
+            340
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.blink_smile"
+        },
+        {
+          "file": "animations/idle.loop/004.png",
+          "durationMs": 83,
+          "visualBounds": [
+            168,
+            124,
+            175,
+            340
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.blink_smile"
+        },
+        {
+          "file": "animations/idle.loop/005.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.alt"
+        },
+        {
+          "file": "animations/idle.loop/006.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/idle.loop/007.png",
+          "durationMs": 918,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        }
+      ]
+    },
+    {
+      "id": "sit.enter",
+      "loop": false,
+      "fallbackPoseId": "sit.edge_idle",
+      "frames": [
+        {
+          "file": "animations/sit.enter/000.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/sit.enter/001.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/sit.enter/002.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/sit.enter/003.png",
+          "durationMs": 83,
+          "visualBounds": [
+            171,
+            123,
+            170,
+            341
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sit.edge_idle"
+        },
+        {
+          "file": "animations/sit.enter/004.png",
+          "durationMs": 83,
+          "visualBounds": [
+            171,
+            123,
+            170,
+            341
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sit.edge_idle"
+        },
+        {
+          "file": "animations/sit.enter/005.png",
+          "durationMs": 83,
+          "visualBounds": [
+            171,
+            123,
+            170,
+            341
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sit.edge_idle"
+        },
+        {
+          "file": "animations/sit.enter/006.png",
+          "durationMs": 83,
+          "visualBounds": [
+            170,
+            129,
+            172,
+            335
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sit.edge_alt"
+        },
+        {
+          "file": "animations/sit.enter/007.png",
+          "durationMs": 83,
+          "visualBounds": [
+            170,
+            129,
+            172,
+            335
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sit.edge_alt"
+        }
+      ]
+    },
+    {
+      "id": "sit.loop",
+      "loop": true,
+      "fallbackPoseId": "sit.edge_idle",
+      "frames": [
+        {
+          "file": "animations/sit.loop/000.png",
+          "durationMs": 250,
+          "visualBounds": [
+            171,
+            123,
+            170,
+            341
+          ],
+          "anchor": [
+            0.5,
+            0.6265234375
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sit.edge_idle"
+        },
+        {
+          "file": "animations/sit.loop/001.png",
+          "durationMs": 250,
+          "visualBounds": [
+            170,
+            129,
+            172,
+            335
+          ],
+          "anchor": [
+            0.5,
+            0.6314453124999999
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sit.edge_alt"
+        },
+        {
+          "file": "animations/sit.loop/002.png",
+          "durationMs": 250,
+          "visualBounds": [
+            171,
+            123,
+            170,
+            341
+          ],
+          "anchor": [
+            0.5,
+            0.6265234375
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sit.edge_idle"
+        },
+        {
+          "file": "animations/sit.loop/003.png",
+          "durationMs": 250,
+          "visualBounds": [
+            170,
+            129,
+            172,
+            335
+          ],
+          "anchor": [
+            0.5,
+            0.6314453124999999
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sit.edge_alt"
+        },
+        {
+          "file": "animations/sit.loop/004.png",
+          "durationMs": 250,
+          "visualBounds": [
+            171,
+            123,
+            170,
+            341
+          ],
+          "anchor": [
+            0.5,
+            0.6265234375
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sit.edge_idle"
+        },
+        {
+          "file": "animations/sit.loop/005.png",
+          "durationMs": 250,
+          "visualBounds": [
+            170,
+            129,
+            172,
+            335
+          ],
+          "anchor": [
+            0.5,
+            0.6314453124999999
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sit.edge_alt"
+        }
+      ]
+    },
+    {
+      "id": "sit.exit",
+      "loop": false,
+      "fallbackPoseId": "idle.neutral",
+      "frames": [
+        {
+          "file": "animations/sit.exit/000.png",
+          "durationMs": 83,
+          "visualBounds": [
+            170,
+            129,
+            172,
+            335
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sit.edge_alt"
+        },
+        {
+          "file": "animations/sit.exit/001.png",
+          "durationMs": 83,
+          "visualBounds": [
+            170,
+            129,
+            172,
+            335
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sit.edge_alt"
+        },
+        {
+          "file": "animations/sit.exit/002.png",
+          "durationMs": 83,
+          "visualBounds": [
+            170,
+            129,
+            172,
+            335
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sit.edge_alt"
+        },
+        {
+          "file": "animations/sit.exit/003.png",
+          "durationMs": 83,
+          "visualBounds": [
+            171,
+            123,
+            170,
+            341
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sit.edge_idle"
+        },
+        {
+          "file": "animations/sit.exit/004.png",
+          "durationMs": 83,
+          "visualBounds": [
+            171,
+            123,
+            170,
+            341
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sit.edge_idle"
+        },
+        {
+          "file": "animations/sit.exit/005.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/sit.exit/006.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/sit.exit/007.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        }
+      ]
+    },
+    {
+      "id": "read.enter",
+      "loop": false,
+      "fallbackPoseId": "read.hold",
+      "frames": [
+        {
+          "file": "animations/read.enter/000.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/read.enter/001.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/read.enter/002.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            169,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.small"
+        },
+        {
+          "file": "animations/read.enter/003.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            169,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.small"
+        },
+        {
+          "file": "animations/read.enter/004.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            169,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.small"
+        },
+        {
+          "file": "animations/read.enter/005.png",
+          "durationMs": 83,
+          "visualBounds": [
+            176,
+            124,
+            161,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.hold"
+        },
+        {
+          "file": "animations/read.enter/006.png",
+          "durationMs": 83,
+          "visualBounds": [
+            176,
+            124,
+            161,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.hold"
+        },
+        {
+          "file": "animations/read.enter/007.png",
+          "durationMs": 83,
+          "visualBounds": [
+            176,
+            124,
+            161,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.hold"
+        }
+      ]
+    },
+    {
+      "id": "read.loop",
+      "loop": true,
+      "fallbackPoseId": "read.hold",
+      "frames": [
+        {
+          "file": "animations/read.loop/000.png",
+          "durationMs": 150,
+          "visualBounds": [
+            176,
+            124,
+            161,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.hold"
+        },
+        {
+          "file": "animations/read.loop/001.png",
+          "durationMs": 150,
+          "visualBounds": [
+            176,
+            124,
+            161,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.hold"
+        },
+        {
+          "file": "animations/read.loop/002.png",
+          "durationMs": 150,
+          "visualBounds": [
+            172,
+            124,
+            169,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.small"
+        },
+        {
+          "file": "animations/read.loop/003.png",
+          "durationMs": 150,
+          "visualBounds": [
+            176,
+            124,
+            161,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.hold"
+        },
+        {
+          "file": "animations/read.loop/004.png",
+          "durationMs": 150,
+          "visualBounds": [
+            176,
+            124,
+            161,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.hold"
+        },
+        {
+          "file": "animations/read.loop/005.png",
+          "durationMs": 150,
+          "visualBounds": [
+            176,
+            124,
+            161,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.hold"
+        },
+        {
+          "file": "animations/read.loop/006.png",
+          "durationMs": 150,
+          "visualBounds": [
+            172,
+            124,
+            169,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.small"
+        },
+        {
+          "file": "animations/read.loop/007.png",
+          "durationMs": 150,
+          "visualBounds": [
+            176,
+            124,
+            161,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.hold"
+        }
+      ]
+    },
+    {
+      "id": "read.surprise",
+      "loop": false,
+      "fallbackPoseId": "read.surprised",
+      "frames": [
+        {
+          "file": "animations/read.surprise/000.png",
+          "durationMs": 83,
+          "visualBounds": [
+            176,
+            124,
+            161,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "read.hold"
+        },
+        {
+          "file": "animations/read.surprise/001.png",
+          "durationMs": 83,
+          "visualBounds": [
+            148,
+            124,
+            216,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "read.surprised"
+        },
+        {
+          "file": "animations/read.surprise/002.png",
+          "durationMs": 83,
+          "visualBounds": [
+            148,
+            124,
+            216,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "read.surprised"
+        },
+        {
+          "file": "animations/read.surprise/003.png",
+          "durationMs": 83,
+          "visualBounds": [
+            148,
+            124,
+            216,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "read.surprised"
+        },
+        {
+          "file": "animations/read.surprise/004.png",
+          "durationMs": 83,
+          "visualBounds": [
+            176,
+            124,
+            161,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "read.hold"
+        },
+        {
+          "file": "animations/read.surprise/005.png",
+          "durationMs": 83,
+          "visualBounds": [
+            176,
+            124,
+            161,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "read.hold"
+        }
+      ]
+    },
+    {
+      "id": "read.exit",
+      "loop": false,
+      "fallbackPoseId": "idle.neutral",
+      "frames": [
+        {
+          "file": "animations/read.exit/000.png",
+          "durationMs": 83,
+          "visualBounds": [
+            176,
+            124,
+            161,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.hold"
+        },
+        {
+          "file": "animations/read.exit/001.png",
+          "durationMs": 83,
+          "visualBounds": [
+            176,
+            124,
+            161,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.hold"
+        },
+        {
+          "file": "animations/read.exit/002.png",
+          "durationMs": 83,
+          "visualBounds": [
+            176,
+            124,
+            161,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.hold"
+        },
+        {
+          "file": "animations/read.exit/003.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            169,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.small"
+        },
+        {
+          "file": "animations/read.exit/004.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            169,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "read.small"
+        },
+        {
+          "file": "animations/read.exit/005.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/read.exit/006.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/read.exit/007.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        }
+      ]
+    },
+    {
+      "id": "sleep.enter",
+      "loop": false,
+      "fallbackPoseId": "sleep.seated",
+      "frames": [
+        {
+          "file": "animations/sleep.enter/000.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/sleep.enter/001.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/sleep.enter/002.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/sleep.enter/003.png",
+          "durationMs": 83,
+          "visualBounds": [
+            162,
+            156,
+            187,
+            308
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sleep.seated"
+        },
+        {
+          "file": "animations/sleep.enter/004.png",
+          "durationMs": 83,
+          "visualBounds": [
+            162,
+            156,
+            187,
+            308
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sleep.seated"
+        },
+        {
+          "file": "animations/sleep.enter/005.png",
+          "durationMs": 83,
+          "visualBounds": [
+            162,
+            156,
+            187,
+            308
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sleep.seated"
+        },
+        {
+          "file": "animations/sleep.enter/006.png",
+          "durationMs": 83,
+          "visualBounds": [
+            162,
+            156,
+            187,
+            308
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sleep.seated"
+        },
+        {
+          "file": "animations/sleep.enter/007.png",
+          "durationMs": 83,
+          "visualBounds": [
+            162,
+            156,
+            187,
+            308
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sleep.seated"
+        }
+      ]
+    },
+    {
+      "id": "sleep.loop",
+      "loop": true,
+      "fallbackPoseId": "sleep.seated",
+      "frames": [
+        {
+          "file": "animations/sleep.loop/000.png",
+          "durationMs": 333,
+          "visualBounds": [
+            162,
+            156,
+            187,
+            308
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sleep.seated"
+        },
+        {
+          "file": "animations/sleep.loop/001.png",
+          "durationMs": 333,
+          "visualBounds": [
+            156,
+            143,
+            199,
+            321
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sleep.seated_alt"
+        },
+        {
+          "file": "animations/sleep.loop/002.png",
+          "durationMs": 334,
+          "visualBounds": [
+            162,
+            156,
+            187,
+            308
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sleep.seated"
+        },
+        {
+          "file": "animations/sleep.loop/003.png",
+          "durationMs": 333,
+          "visualBounds": [
+            156,
+            143,
+            199,
+            321
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sleep.seated_alt"
+        },
+        {
+          "file": "animations/sleep.loop/004.png",
+          "durationMs": 333,
+          "visualBounds": [
+            162,
+            156,
+            187,
+            308
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sleep.seated"
+        },
+        {
+          "file": "animations/sleep.loop/005.png",
+          "durationMs": 334,
+          "visualBounds": [
+            156,
+            143,
+            199,
+            321
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sleep.seated_alt"
+        }
+      ]
+    },
+    {
+      "id": "sleep.exit",
+      "loop": false,
+      "fallbackPoseId": "idle.neutral",
+      "frames": [
+        {
+          "file": "animations/sleep.exit/000.png",
+          "durationMs": 83,
+          "visualBounds": [
+            156,
+            143,
+            199,
+            321
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sleep.seated_alt"
+        },
+        {
+          "file": "animations/sleep.exit/001.png",
+          "durationMs": 83,
+          "visualBounds": [
+            156,
+            143,
+            199,
+            321
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sleep.seated_alt"
+        },
+        {
+          "file": "animations/sleep.exit/002.png",
+          "durationMs": 83,
+          "visualBounds": [
+            156,
+            143,
+            199,
+            321
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sleep.seated_alt"
+        },
+        {
+          "file": "animations/sleep.exit/003.png",
+          "durationMs": 83,
+          "visualBounds": [
+            162,
+            156,
+            187,
+            308
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sleep.seated"
+        },
+        {
+          "file": "animations/sleep.exit/004.png",
+          "durationMs": 83,
+          "visualBounds": [
+            162,
+            156,
+            187,
+            308
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "sleep.seated"
+        },
+        {
+          "file": "animations/sleep.exit/005.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/sleep.exit/006.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/sleep.exit/007.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        }
+      ]
+    },
+    {
+      "id": "heart.play",
+      "loop": false,
+      "fallbackPoseId": "heart",
+      "frames": [
+        {
+          "file": "animations/heart.play/000.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/heart.play/001.png",
+          "durationMs": 83,
+          "visualBounds": [
+            174,
+            124,
+            165,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "heart"
+        },
+        {
+          "file": "animations/heart.play/002.png",
+          "durationMs": 83,
+          "visualBounds": [
+            174,
+            124,
+            165,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "heart"
+        },
+        {
+          "file": "animations/heart.play/003.png",
+          "durationMs": 83,
+          "visualBounds": [
+            165,
+            124,
+            182,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "heart.raise"
+        },
+        {
+          "file": "animations/heart.play/004.png",
+          "durationMs": 83,
+          "visualBounds": [
+            165,
+            124,
+            182,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "heart.raise"
+        },
+        {
+          "file": "animations/heart.play/005.png",
+          "durationMs": 83,
+          "visualBounds": [
+            165,
+            124,
+            182,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "heart.raise"
+        },
+        {
+          "file": "animations/heart.play/006.png",
+          "durationMs": 83,
+          "visualBounds": [
+            174,
+            124,
+            165,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "heart"
+        },
+        {
+          "file": "animations/heart.play/007.png",
+          "durationMs": 83,
+          "visualBounds": [
+            174,
+            124,
+            165,
+            340
+          ],
+          "anchor": [
+            0.5009765625,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "heart"
+        },
+        {
+          "file": "animations/heart.play/008.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/heart.play/009.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "idle.neutral"
+        }
+      ]
+    },
+    {
+      "id": "wave.play",
+      "loop": false,
+      "fallbackPoseId": "wave.single_a",
+      "frames": [
+        {
+          "file": "animations/wave.play/000.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/wave.play/001.png",
+          "durationMs": 83,
+          "visualBounds": [
+            137,
+            124,
+            237,
+            340
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "wave.single_b"
+        },
+        {
+          "file": "animations/wave.play/002.png",
+          "durationMs": 83,
+          "visualBounds": [
+            146,
+            124,
+            218,
+            340
+          ],
+          "anchor": [
+            0.498046875,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "wave.single_a"
+        },
+        {
+          "file": "animations/wave.play/003.png",
+          "durationMs": 83,
+          "visualBounds": [
+            123,
+            124,
+            266,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "cheer.both_hands"
+        },
+        {
+          "file": "animations/wave.play/004.png",
+          "durationMs": 83,
+          "visualBounds": [
+            146,
+            124,
+            218,
+            340
+          ],
+          "anchor": [
+            0.498046875,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "wave.single_a"
+        },
+        {
+          "file": "animations/wave.play/005.png",
+          "durationMs": 83,
+          "visualBounds": [
+            137,
+            124,
+            237,
+            340
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "wave.single_b"
+        },
+        {
+          "file": "animations/wave.play/006.png",
+          "durationMs": 83,
+          "visualBounds": [
+            146,
+            124,
+            218,
+            340
+          ],
+          "anchor": [
+            0.498046875,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "wave.single_a"
+        },
+        {
+          "file": "animations/wave.play/007.png",
+          "durationMs": 83,
+          "visualBounds": [
+            123,
+            124,
+            266,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "cheer.both_hands"
+        },
+        {
+          "file": "animations/wave.play/008.png",
+          "durationMs": 83,
+          "visualBounds": [
+            146,
+            124,
+            218,
+            340
+          ],
+          "anchor": [
+            0.498046875,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "wave.single_a"
+        },
+        {
+          "file": "animations/wave.play/009.png",
+          "durationMs": 83,
+          "visualBounds": [
+            137,
+            124,
+            237,
+            340
+          ],
+          "anchor": [
+            0.4990234375,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "wave.single_b"
+        },
+        {
+          "file": "animations/wave.play/010.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/wave.play/011.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "idle.neutral"
+        }
+      ]
+    },
+    {
+      "id": "write.enter",
+      "loop": false,
+      "fallbackPoseId": "write.prone",
+      "frames": [
+        {
+          "file": "animations/write.enter/000.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/write.enter/001.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/write.enter/002.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/write.enter/003.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/write.enter/004.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        },
+        {
+          "file": "animations/write.enter/005.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        },
+        {
+          "file": "animations/write.enter/006.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        },
+        {
+          "file": "animations/write.enter/007.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        },
+        {
+          "file": "animations/write.enter/008.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        },
+        {
+          "file": "animations/write.enter/009.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        }
+      ]
+    },
+    {
+      "id": "write.loop",
+      "loop": true,
+      "fallbackPoseId": "write.prone",
+      "frames": [
+        {
+          "file": "animations/write.loop/000.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        },
+        {
+          "file": "animations/write.loop/001.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        },
+        {
+          "file": "animations/write.loop/002.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        },
+        {
+          "file": "animations/write.loop/003.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        },
+        {
+          "file": "animations/write.loop/004.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        },
+        {
+          "file": "animations/write.loop/005.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        },
+        {
+          "file": "animations/write.loop/006.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        },
+        {
+          "file": "animations/write.loop/007.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        }
+      ]
+    },
+    {
+      "id": "write.exit",
+      "loop": false,
+      "fallbackPoseId": "idle.neutral",
+      "frames": [
+        {
+          "file": "animations/write.exit/000.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        },
+        {
+          "file": "animations/write.exit/001.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        },
+        {
+          "file": "animations/write.exit/002.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        },
+        {
+          "file": "animations/write.exit/003.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        },
+        {
+          "file": "animations/write.exit/004.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        },
+        {
+          "file": "animations/write.exit/005.png",
+          "durationMs": 83,
+          "visualBounds": [
+            127,
+            235,
+            258,
+            229
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "write.prone"
+        },
+        {
+          "file": "animations/write.exit/006.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/write.exit/007.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/write.exit/008.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/write.exit/009.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": true,
+          "sourcePoseId": "idle.neutral"
+        }
+      ]
+    },
+    {
+      "id": "drag.loop",
+      "loop": true,
+      "fallbackPoseId": "falling.reach",
+      "frames": [
+        {
+          "file": "animations/drag.loop/000.png",
+          "durationMs": 83,
+          "visualBounds": [
+            141,
+            104,
+            230,
+            304
+          ],
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "interruptible": true,
+          "sourcePoseId": "falling.reach"
+        },
+        {
+          "file": "animations/drag.loop/001.png",
+          "durationMs": 83,
+          "visualBounds": [
+            141,
+            104,
+            230,
+            304
+          ],
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "interruptible": true,
+          "sourcePoseId": "falling.reach"
+        },
+        {
+          "file": "animations/drag.loop/002.png",
+          "durationMs": 83,
+          "visualBounds": [
+            141,
+            104,
+            230,
+            304
+          ],
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "interruptible": true,
+          "sourcePoseId": "falling.reach"
+        },
+        {
+          "file": "animations/drag.loop/003.png",
+          "durationMs": 83,
+          "visualBounds": [
+            141,
+            104,
+            230,
+            304
+          ],
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "interruptible": true,
+          "sourcePoseId": "falling.reach"
+        },
+        {
+          "file": "animations/drag.loop/004.png",
+          "durationMs": 83,
+          "visualBounds": [
+            141,
+            104,
+            230,
+            304
+          ],
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "interruptible": true,
+          "sourcePoseId": "falling.reach"
+        },
+        {
+          "file": "animations/drag.loop/005.png",
+          "durationMs": 83,
+          "visualBounds": [
+            141,
+            104,
+            230,
+            304
+          ],
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "interruptible": true,
+          "sourcePoseId": "falling.reach"
+        }
+      ]
+    },
+    {
+      "id": "fall.play",
+      "loop": false,
+      "fallbackPoseId": "falling.reach",
+      "frames": [
+        {
+          "file": "animations/fall.play/000.png",
+          "durationMs": 83,
+          "visualBounds": [
+            141,
+            104,
+            230,
+            304
+          ],
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "interruptible": false,
+          "sourcePoseId": "falling.reach"
+        },
+        {
+          "file": "animations/fall.play/001.png",
+          "durationMs": 83,
+          "visualBounds": [
+            141,
+            104,
+            230,
+            304
+          ],
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "interruptible": false,
+          "sourcePoseId": "falling.reach"
+        },
+        {
+          "file": "animations/fall.play/002.png",
+          "durationMs": 83,
+          "visualBounds": [
+            141,
+            104,
+            230,
+            304
+          ],
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "interruptible": false,
+          "sourcePoseId": "falling.reach"
+        },
+        {
+          "file": "animations/fall.play/003.png",
+          "durationMs": 83,
+          "visualBounds": [
+            141,
+            104,
+            230,
+            304
+          ],
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "interruptible": false,
+          "sourcePoseId": "falling.reach"
+        },
+        {
+          "file": "animations/fall.play/004.png",
+          "durationMs": 83,
+          "visualBounds": [
+            141,
+            104,
+            230,
+            304
+          ],
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "interruptible": false,
+          "sourcePoseId": "falling.reach"
+        },
+        {
+          "file": "animations/fall.play/005.png",
+          "durationMs": 83,
+          "visualBounds": [
+            141,
+            104,
+            230,
+            304
+          ],
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "interruptible": false,
+          "sourcePoseId": "falling.reach"
+        },
+        {
+          "file": "animations/fall.play/006.png",
+          "durationMs": 83,
+          "visualBounds": [
+            141,
+            104,
+            230,
+            304
+          ],
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "interruptible": false,
+          "sourcePoseId": "falling.reach"
+        },
+        {
+          "file": "animations/fall.play/007.png",
+          "durationMs": 83,
+          "visualBounds": [
+            141,
+            104,
+            230,
+            304
+          ],
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "interruptible": false,
+          "sourcePoseId": "falling.reach"
+        }
+      ]
+    },
+    {
+      "id": "landing.play",
+      "loop": false,
+      "fallbackPoseId": "idle.neutral",
+      "frames": [
+        {
+          "file": "animations/landing.play/000.png",
+          "durationMs": 83,
+          "visualBounds": [
+            141,
+            104,
+            230,
+            304
+          ],
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "interruptible": false,
+          "sourcePoseId": "falling.reach"
+        },
+        {
+          "file": "animations/landing.play/001.png",
+          "durationMs": 83,
+          "visualBounds": [
+            141,
+            104,
+            230,
+            304
+          ],
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "interruptible": false,
+          "sourcePoseId": "falling.reach"
+        },
+        {
+          "file": "animations/landing.play/002.png",
+          "durationMs": 83,
+          "visualBounds": [
+            141,
+            104,
+            230,
+            304
+          ],
+          "anchor": [
+            0.5,
+            0.5
+          ],
+          "interruptible": false,
+          "sourcePoseId": "falling.reach"
+        },
+        {
+          "file": "animations/landing.play/003.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/landing.play/004.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "idle.neutral"
+        },
+        {
+          "file": "animations/landing.play/005.png",
+          "durationMs": 83,
+          "visualBounds": [
+            172,
+            124,
+            168,
+            340
+          ],
+          "anchor": [
+            0.5,
+            0.90625
+          ],
+          "interruptible": false,
+          "sourcePoseId": "idle.neutral"
+        }
+      ]
+    }
+  ]
+}

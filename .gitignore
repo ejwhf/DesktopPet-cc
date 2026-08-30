@@ -1,0 +1,22 @@
+# .NET build output
+**/bin/
+**/obj/
+.dotnet-cli/
+.dotnet-home/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local release packages
+dist/
+
+# IDE and user state
+.vs/
+.vscode/
+*.user
+*.suo
+
+# OS metadata
+Thumbs.db
+.DS_Store

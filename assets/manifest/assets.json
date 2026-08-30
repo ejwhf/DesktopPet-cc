@@ -1,0 +1,530 @@
+{
+  "schemaVersion": 1,
+  "sourceSize": [
+    512,
+    512
+  ],
+  "hitMaskAlphaThreshold": 16,
+  "sourceSheet": "assets/sheets/character-actions-rgba-v2.png",
+  "normalization": {
+    "masterAssetId": "idle.neutral",
+    "masterFaceWidthPx": 74,
+    "targetFaceWidthPx": 98,
+    "targetStandingHeightPx": 340,
+    "safetyMarginPx": 48
+  },
+  "assets": [
+    {
+      "id": "peek.screen_left",
+      "file": "sprites/peek.screen_left.png",
+      "sourceSize": [
+        512,
+        512
+      ],
+      "visualBounds": [
+        48,
+        124,
+        159,
+        340
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "hitMask": "masks/peek.screen_left.png",
+      "durationMs": 1200,
+      "interruptible": true,
+      "weight": 1,
+      "cooldownMs": 0,
+      "nextStates": [],
+      "edgeAnchor": [
+        0.09375,
+        0.90625
+      ],
+      "groundAnchor": [
+        0.2490234375,
+        0.90625
+      ]
+    },
+    {
+      "id": "falling.reach",
+      "file": "sprites/falling.reach.png",
+      "sourceSize": [
+        512,
+        512
+      ],
+      "visualBounds": [
+        141,
+        104,
+        230,
+        304
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "hitMask": "masks/falling.reach.png",
+      "durationMs": 1200,
+      "interruptible": true,
+      "weight": 1,
+      "cooldownMs": 0,
+      "nextStates": []
+    },
+    {
+      "id": "sit.edge_idle",
+      "file": "sprites/sit.edge_idle.png",
+      "sourceSize": [
+        512,
+        512
+      ],
+      "visualBounds": [
+        171,
+        123,
+        170,
+        341
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "hitMask": "masks/sit.edge_idle.png",
+      "durationMs": 1200,
+      "interruptible": true,
+      "weight": 1,
+      "cooldownMs": 0,
+      "nextStates": [],
+      "seatAnchor": [
+        0.5,
+        0.6265234375
+      ],
+      "groundAnchor": [
+        0.5,
+        0.90625
+      ]
+    },
+    {
+      "id": "sit.edge_alt",
+      "file": "sprites/sit.edge_alt.png",
+      "sourceSize": [
+        512,
+        512
+      ],
+      "visualBounds": [
+        170,
+        129,
+        172,
+        335
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "hitMask": "masks/sit.edge_alt.png",
+      "durationMs": 1200,
+      "interruptible": true,
+      "weight": 1,
+      "cooldownMs": 0,
+      "nextStates": [],
+      "seatAnchor": [
+        0.5,
+        0.6314453124999999
+      ],
+      "groundAnchor": [
+        0.5,
+        0.90625
+      ]
+    },
+    {
+      "id": "idle.blink_smile",
+      "file": "sprites/idle.blink_smile.png",
+      "sourceSize": [
+        512,
+        512
+      ],
+      "visualBounds": [
+        168,
+        124,
+        175,
+        340
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "hitMask": "masks/idle.blink_smile.png",
+      "durationMs": 1200,
+      "interruptible": true,
+      "weight": 1,
+      "cooldownMs": 0,
+      "nextStates": [],
+      "groundAnchor": [
+        0.4990234375,
+        0.90625
+      ]
+    },
+    {
+      "id": "idle.neutral",
+      "file": "sprites/idle.neutral.png",
+      "sourceSize": [
+        512,
+        512
+      ],
+      "visualBounds": [
+        172,
+        124,
+        168,
+        340
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "hitMask": "masks/idle.neutral.png",
+      "durationMs": 1200,
+      "interruptible": true,
+      "weight": 1,
+      "cooldownMs": 0,
+      "nextStates": [],
+      "groundAnchor": [
+        0.5,
+        0.90625
+      ]
+    },
+    {
+      "id": "idle.alt",
+      "file": "sprites/idle.alt.png",
+      "sourceSize": [
+        512,
+        512
+      ],
+      "visualBounds": [
+        172,
+        124,
+        168,
+        340
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "hitMask": "masks/idle.alt.png",
+      "durationMs": 1200,
+      "interruptible": true,
+      "weight": 1,
+      "cooldownMs": 0,
+      "nextStates": [],
+      "groundAnchor": [
+        0.5,
+        0.90625
+      ]
+    },
+    {
+      "id": "read.small",
+      "file": "sprites/read.small.png",
+      "sourceSize": [
+        512,
+        512
+      ],
+      "visualBounds": [
+        172,
+        124,
+        169,
+        340
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "hitMask": "masks/read.small.png",
+      "durationMs": 1200,
+      "interruptible": true,
+      "weight": 1,
+      "cooldownMs": 0,
+      "nextStates": [],
+      "groundAnchor": [
+        0.5009765625,
+        0.90625
+      ]
+    },
+    {
+      "id": "read.hold",
+      "file": "sprites/read.hold.png",
+      "sourceSize": [
+        512,
+        512
+      ],
+      "visualBounds": [
+        176,
+        124,
+        161,
+        340
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "hitMask": "masks/read.hold.png",
+      "durationMs": 1200,
+      "interruptible": true,
+      "weight": 1,
+      "cooldownMs": 0,
+      "nextStates": [],
+      "groundAnchor": [
+        0.5009765625,
+        0.90625
+      ]
+    },
+    {
+      "id": "sleep.seated",
+      "file": "sprites/sleep.seated.png",
+      "sourceSize": [
+        512,
+        512
+      ],
+      "visualBounds": [
+        162,
+        156,
+        187,
+        308
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "hitMask": "masks/sleep.seated.png",
+      "durationMs": 1200,
+      "interruptible": true,
+      "weight": 1,
+      "cooldownMs": 0,
+      "nextStates": [],
+      "floorAnchor": [
+        0.4990234375,
+        0.90625
+      ]
+    },
+    {
+      "id": "heart",
+      "file": "sprites/heart.png",
+      "sourceSize": [
+        512,
+        512
+      ],
+      "visualBounds": [
+        174,
+        124,
+        165,
+        340
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "hitMask": "masks/heart.png",
+      "durationMs": 1200,
+      "interruptible": true,
+      "weight": 1,
+      "cooldownMs": 0,
+      "nextStates": [],
+      "groundAnchor": [
+        0.5009765625,
+        0.90625
+      ]
+    },
+    {
+      "id": "read.surprised",
+      "file": "sprites/read.surprised.png",
+      "sourceSize": [
+        512,
+        512
+      ],
+      "visualBounds": [
+        148,
+        124,
+        216,
+        340
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "hitMask": "masks/read.surprised.png",
+      "durationMs": 1200,
+      "interruptible": true,
+      "weight": 1,
+      "cooldownMs": 0,
+      "nextStates": [],
+      "groundAnchor": [
+        0.5,
+        0.90625
+      ]
+    },
+    {
+      "id": "sleep.seated_alt",
+      "file": "sprites/sleep.seated_alt.png",
+      "sourceSize": [
+        512,
+        512
+      ],
+      "visualBounds": [
+        156,
+        143,
+        199,
+        321
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "hitMask": "masks/sleep.seated_alt.png",
+      "durationMs": 1200,
+      "interruptible": true,
+      "weight": 1,
+      "cooldownMs": 0,
+      "nextStates": [],
+      "floorAnchor": [
+        0.4990234375,
+        0.90625
+      ]
+    },
+    {
+      "id": "heart.raise",
+      "file": "sprites/heart.raise.png",
+      "sourceSize": [
+        512,
+        512
+      ],
+      "visualBounds": [
+        165,
+        124,
+        182,
+        340
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "hitMask": "masks/heart.raise.png",
+      "durationMs": 1200,
+      "interruptible": true,
+      "weight": 1,
+      "cooldownMs": 0,
+      "nextStates": [],
+      "groundAnchor": [
+        0.5,
+        0.90625
+      ]
+    },
+    {
+      "id": "wave.single_a",
+      "file": "sprites/wave.single_a.png",
+      "sourceSize": [
+        512,
+        512
+      ],
+      "visualBounds": [
+        146,
+        124,
+        218,
+        340
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "hitMask": "masks/wave.single_a.png",
+      "durationMs": 1200,
+      "interruptible": true,
+      "weight": 1,
+      "cooldownMs": 0,
+      "nextStates": [],
+      "groundAnchor": [
+        0.498046875,
+        0.90625
+      ]
+    },
+    {
+      "id": "cheer.both_hands",
+      "file": "sprites/cheer.both_hands.png",
+      "sourceSize": [
+        512,
+        512
+      ],
+      "visualBounds": [
+        123,
+        124,
+        266,
+        340
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "hitMask": "masks/cheer.both_hands.png",
+      "durationMs": 1200,
+      "interruptible": true,
+      "weight": 1,
+      "cooldownMs": 0,
+      "nextStates": [],
+      "groundAnchor": [
+        0.5,
+        0.90625
+      ]
+    },
+    {
+      "id": "wave.single_b",
+      "file": "sprites/wave.single_b.png",
+      "sourceSize": [
+        512,
+        512
+      ],
+      "visualBounds": [
+        137,
+        124,
+        237,
+        340
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "hitMask": "masks/wave.single_b.png",
+      "durationMs": 1200,
+      "interruptible": true,
+      "weight": 1,
+      "cooldownMs": 0,
+      "nextStates": [],
+      "groundAnchor": [
+        0.4990234375,
+        0.90625
+      ]
+    },
+    {
+      "id": "write.prone",
+      "file": "sprites/write.prone.png",
+      "sourceSize": [
+        512,
+        512
+      ],
+      "visualBounds": [
+        127,
+        235,
+        258,
+        229
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "hitMask": "masks/write.prone.png",
+      "durationMs": 1200,
+      "interruptible": true,
+      "weight": 1,
+      "cooldownMs": 0,
+      "nextStates": [],
+      "floorAnchor": [
+        0.5,
+        0.90625
+      ]
+    }
+  ]
+}
