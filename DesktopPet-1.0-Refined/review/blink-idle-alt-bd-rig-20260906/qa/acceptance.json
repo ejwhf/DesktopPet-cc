@@ -1,0 +1,50 @@
+{
+  "status": "completed-preview-revision",
+  "pixelValidation": true,
+  "browserValidation": true,
+  "geometryValidation": true,
+  "visualReview": {
+    "reviewer": "assistant",
+    "views": [
+      "four-state eye zoom",
+      "micro-close states 0.5/1.5/5/12 percent",
+      "12 continuous eye states",
+      "276px full-body light/dark",
+      "browser closed screenshot"
+    ],
+    "observations": [
+      "First pass exposed upper lash soft-edge remnants; expanded cleanup support from 2 to 3.5 px and rechecked.",
+      "Current closed state has one shallow line per eye and no visible pupil remnant.",
+      "No apparent glasses jump or body motion in sampled views.",
+      "Skin fill is a harmonic estimate of the unseen eyelid surface, not recovered ground truth."
+    ]
+  },
+  "microOpening": [
+    {
+      "close": 0.005,
+      "meanAbsChannelChangeInsideMask": 0.2748573757131214,
+      "maxChannelChange": 8
+    },
+    {
+      "close": 0.015,
+      "meanAbsChannelChangeInsideMask": 0.9643439282803586,
+      "maxChannelChange": 23
+    },
+    {
+      "close": 0.05,
+      "meanAbsChannelChangeInsideMask": 4.300325998370008,
+      "maxChannelChange": 76
+    },
+    {
+      "close": 0.12,
+      "meanAbsChannelChangeInsideMask": 12.655052974735126,
+      "maxChannelChange": 161
+    }
+  ],
+  "scope": {
+    "runtimeChanged": false,
+    "formalAssetsChanged": false,
+    "githubPushed": false,
+    "nativeCubismModel": false
+  }
+}

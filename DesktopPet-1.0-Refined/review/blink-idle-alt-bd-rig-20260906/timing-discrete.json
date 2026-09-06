@@ -1,0 +1,30 @@
+{
+  "loopMs": 4000,
+  "blinkMs": 300,
+  "sequence": [
+    {
+      "file": "frames/light.png",
+      "ms": 40
+    },
+    {
+      "file": "frames/near.png",
+      "ms": 40
+    },
+    {
+      "file": "frames/closed.png",
+      "ms": 60
+    },
+    {
+      "file": "frames/near.png",
+      "ms": 80
+    },
+    {
+      "file": "frames/light.png",
+      "ms": 80
+    },
+    {
+      "file": "frames/open.png",
+      "ms": 3700
+    }
+  ]
+}

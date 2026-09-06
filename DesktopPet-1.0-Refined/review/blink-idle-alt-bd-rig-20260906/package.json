@@ -1,0 +1,17 @@
+{
+  "name": "desktoppet-idle-alt-bd-blink-review",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Approved source-layer BD-axis blink assets and offline preview tools",
+  "scripts": {
+    "build": "node build.cjs --sequence && node package.cjs",
+    "start": "node serve.cjs",
+    "verify": "node verify.cjs",
+    "verify:browser": "node browser-qa.cjs",
+    "finalize": "node finalize.cjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.4",
+    "playwright": "1.62.1"
+  }
+}

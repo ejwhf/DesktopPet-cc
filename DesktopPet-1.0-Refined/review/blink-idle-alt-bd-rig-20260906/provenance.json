@@ -1,0 +1,20 @@
+{
+  "imageInputs": [
+    "source/idle.alt.png"
+  ],
+  "geometryInput": "source/calibration.json",
+  "sourceSha256": "c723f38ee331ca2deb461bff7256bd43f8f42491397e205399fc959dc48bb47b",
+  "method": "Original-image layers, fixed-position iris clipping, independently authored BD-local lid curves, source-sampled eyelash colour, harmonic skin completion, bounded keyform interpolation.",
+  "generativeModelUsed": false,
+  "oldBlinkArtworkUsed": false,
+  "oldMasksUsed": false,
+  "oldKeyformsUsed": false,
+  "tooling": "Node.js + sharp + isolated Chrome via Playwright",
+  "nearOpenCorrection": "A source-minus-open-model residual is attenuated only inside the edit mask over close 0..0.18, preserving exact rest and continuous micro-close; no whole-image crossfade.",
+  "closedLayer": "closed-eyeline-baked-edge.png includes the sampled clean-plate colour in soft edge pixels; composite only over face-clean.png.",
+  "timingFiles": [
+    "timing.json",
+    "timing-discrete.json"
+  ],
+  "displaySizeBasis": "MainWindow.xaml default width 300 and Viewbox margin 12 imply a 276px square canvas at default window size; OS DPI/user resizing may change physical pixels."
+}

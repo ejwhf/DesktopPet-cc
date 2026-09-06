@@ -1,0 +1,50 @@
+{
+  "frames": [
+    {
+      "state": "open",
+      "outside": 0,
+      "alpha": 0,
+      "changed": 0
+    },
+    {
+      "state": "light",
+      "outside": 0,
+      "alpha": 0,
+      "changed": 1128
+    },
+    {
+      "state": "near",
+      "outside": 0,
+      "alpha": 0,
+      "changed": 1609
+    },
+    {
+      "state": "closed",
+      "outside": 0,
+      "alpha": 0,
+      "changed": 1635
+    }
+  ],
+  "geometry": [
+    {
+      "eye": "L",
+      "minGap": 0,
+      "nonmonotonic": 0,
+      "closedMidpoint": [
+        230.15776149071309,
+        227.1477226011913
+      ]
+    },
+    {
+      "eye": "R",
+      "minGap": 0,
+      "nonmonotonic": 0,
+      "closedMidpoint": [
+        280.3643824099701,
+        212.98954040928663
+      ]
+    }
+  ],
+  "sourceSha256": "c723f38ee331ca2deb461bff7256bd43f8f42491397e205399fc959dc48bb47b",
+  "editPixels": 1636
+}

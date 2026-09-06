@@ -1,0 +1,94 @@
+{
+  "browser": "Chrome headless, isolated profile",
+  "errors": [],
+  "states": [
+    {
+      "name": "原图睁眼",
+      "status": "原图睁眼"
+    },
+    {
+      "name": "轻闭",
+      "status": "轻闭"
+    },
+    {
+      "name": "近闭",
+      "status": "近闭"
+    },
+    {
+      "name": "全闭",
+      "status": "全闭"
+    }
+  ],
+  "slider": "50.0%",
+  "step": "暂停 · 第 2 / 17 帧",
+  "live": {
+    "uniqueFrames": 14,
+    "elapsedMs": 4304.5
+  },
+  "svg": [
+    {
+      "seconds": 0.5,
+      "active": [
+        "frame-0"
+      ]
+    },
+    {
+      "seconds": 1.01,
+      "active": [
+        "frame-1"
+      ]
+    },
+    {
+      "seconds": 1.07,
+      "active": [
+        "frame-4"
+      ]
+    },
+    {
+      "seconds": 1.1,
+      "active": [
+        "frame-6"
+      ]
+    },
+    {
+      "seconds": 1.15,
+      "active": [
+        "frame-8"
+      ]
+    },
+    {
+      "seconds": 1.25,
+      "active": [
+        "frame-13"
+      ]
+    },
+    {
+      "seconds": 1.31,
+      "active": [
+        "frame-16"
+      ]
+    },
+    {
+      "seconds": 3.99,
+      "active": [
+        "frame-16"
+      ]
+    },
+    {
+      "seconds": 4.01,
+      "active": [
+        "frame-0"
+      ]
+    }
+  ],
+  "svgLive": {
+    "uniqueFrames": 17
+  },
+  "encodedLive": {
+    "webpUniqueFrames": 6,
+    "gifUniqueFrames": 7,
+    "screenshotSamples": 75,
+    "method": "Actual painted animated image screenshots; canvas drawImage uses the default animation frame"
+  },
+  "pass": true
+}

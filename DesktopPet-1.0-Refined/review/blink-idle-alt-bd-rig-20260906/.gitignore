@@ -1,0 +1,7 @@
+node_modules/
+*.log
+/fix-*.cjs
+/prepare-export.cjs
+/refine.cjs
+/qa/build-first-pass.cjs
+/qa/right-grid.jpg

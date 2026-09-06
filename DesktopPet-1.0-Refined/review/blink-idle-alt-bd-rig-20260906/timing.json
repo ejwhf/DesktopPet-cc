@@ -1,0 +1,91 @@
+{
+  "loopMs": 4000,
+  "blinkMs": 300,
+  "sequence": [
+    {
+      "p": 0,
+      "ms": 1000,
+      "file": "frames/sequence/00.png"
+    },
+    {
+      "p": 0.04296875,
+      "ms": 20,
+      "file": "frames/sequence/01.png"
+    },
+    {
+      "p": 0.31640625,
+      "ms": 20,
+      "file": "frames/sequence/02.png"
+    },
+    {
+      "p": 0.68359375,
+      "ms": 20,
+      "file": "frames/sequence/03.png"
+    },
+    {
+      "p": 0.95703125,
+      "ms": 20,
+      "file": "frames/sequence/04.png"
+    },
+    {
+      "p": 1,
+      "ms": 20,
+      "file": "frames/sequence/05.png"
+    },
+    {
+      "p": 1,
+      "ms": 20,
+      "file": "frames/sequence/06.png"
+    },
+    {
+      "p": 1,
+      "ms": 20,
+      "file": "frames/sequence/07.png"
+    },
+    {
+      "p": 0.98876953125,
+      "ms": 20,
+      "file": "frames/sequence/08.png"
+    },
+    {
+      "p": 0.90771484375,
+      "ms": 20,
+      "file": "frames/sequence/09.png"
+    },
+    {
+      "p": 0.76806640625,
+      "ms": 20,
+      "file": "frames/sequence/10.png"
+    },
+    {
+      "p": 0.59326171875,
+      "ms": 20,
+      "file": "frames/sequence/11.png"
+    },
+    {
+      "p": 0.40673828125,
+      "ms": 20,
+      "file": "frames/sequence/12.png"
+    },
+    {
+      "p": 0.23193359375,
+      "ms": 20,
+      "file": "frames/sequence/13.png"
+    },
+    {
+      "p": 0.09228515625,
+      "ms": 20,
+      "file": "frames/sequence/14.png"
+    },
+    {
+      "p": 0.01123046875,
+      "ms": 20,
+      "file": "frames/sequence/15.png"
+    },
+    {
+      "p": 0,
+      "ms": 2700,
+      "file": "frames/sequence/16.png"
+    }
+  ]
+}

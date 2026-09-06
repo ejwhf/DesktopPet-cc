@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 2,
+  "status": "source-calibration-candidate",
+  "source": "source/idle.alt.png",
+  "sourceSha256": "C723F38EE331CA2DEB461BFF7256BD43F8F42491397E205399FC959DC48BB47B",
+  "coordinates": "original 512x512 pixel coordinates; x right, y down; subpixel positions are estimates, not measured precision",
+  "method": "User-selected B-D reference axis; source contour and all four endpoint candidates preserved",
+  "commonAxis": {
+    "definition": "line through B and D",
+    "anchorIds": [
+      "B",
+      "D"
+    ],
+    "anchors": [
+      [
+        243.4,
+        222
+      ],
+      [
+        293.2,
+        207.3
+      ]
+    ],
+    "origin": [
+      254.81651908782757,
+      218.6300636427497
+    ],
+    "originDefinition": "previous common center projected onto BD; not an anatomical landmark",
+    "tangent": [
+      0.9590890404765203,
+      -0.2831045962852378
+    ],
+    "normal": [
+      0.2831045962852378,
+      0.9590890404765203
+    ],
+    "angleDegrees": -16.445584443496617,
+    "angleConvention": "negative = rises toward screen right"
+  },
+  "previousCenterAxis": {
+    "origin": [
+      254.49275367471392,
+      217.5332257126096
+    ],
+    "centers": [
+      [
+        229.66999767873685,
+        224.01335555113388
+      ],
+      [
+        279.315509670691,
+        211.05309587408533
+      ]
+    ],
+    "tangent": [
+      0.9675731936898433,
+      -0.2525908051628893
+    ],
+    "angleDegrees": -14.630875811791963
+  },
+  "axisComparison": {
+    "angleChangeDegrees": -1.8147086317046544
+  },
+  "coordinateNormalReference": {
+    "origin": [
+      254.81651908782757,
+      218.6300636427497
+    ],
+    "direction": [
+      0.2831045962852378,
+      0.9590890404765203
+    ],
+    "type": "constructed perpendicular, not a facial midline"
+  },
+  "eyes": [
+    {
+      "id": "L",
+      "name": "屏幕左眼",
+      "contour": [
+        [
+          215.5,
+          227.5
+        ],
+        [
+          216.3,
+          222
+        ],
+        [
+          219,
+          217
+        ],
+        [
+          223.5,
+          213.7
+        ],
+        [
+          229,
+          212
+        ],
+        [
+          234.5,
+          212.5
+        ],
+        [
+          239.4,
+          215.7
+        ],
+        [
+          242,
+          219
+        ],
+        [
+          243.4,
+          222
+        ],
+        [
+          243.4,
+          227
+        ],
+        [
+          240.5,
+          231.5
+        ],
+        [
+          236,
+          234.3
+        ],
+        [
+          230,
+          235.6
+        ],
+        [
+          224,
+          234.6
+        ],
+        [
+          219,
+          232.3
+        ]
+      ],
+      "left": {
+        "id": "A",
+        "xy": [
+          215.5,
+          227.5
+        ],
+        "radius": [
+          1,
+          1.5
+        ],
+        "confidence": "medium",
+        "role": "外侧"
+      },
+      "right": {
+        "id": "B",
+        "xy": [
+          243.4,
+          222
+        ],
+        "radius": [
+          1.5,
+          2
+        ],
+        "confidence": "low-medium",
+        "role": "内侧"
+      },
+      "center": [
+        229.66999767873685,
+        224.01335555113388
+      ],
+      "localOrigin": [
+        229.66999767873685,
+        224.01335555113388
+      ],
+      "axisAngleDegrees": -11.151875552161787,
+      "localPoints": [
+        {
+          "id": "A",
+          "uv": [
+            -14.57737454634065,
+            -0.6675889932557637
+          ],
+          "commonUV": [
+            -40.21916231831644,
+            -2.6236285137372697
+          ],
+          "signedDistanceToBD": -2.623628513737275
+        },
+        {
+          "id": "B",
+          "uv": [
+            13.738284962523078,
+            1.9560395204815118
+          ],
+          "commonUV": [
+            -11.903502809452712,
+            5.329070518200751e-15
+          ],
+          "signedDistanceToBD": 0
+        }
+      ],
+      "widthAlongCommonAxis": 28.315659508863728
+    },
+    {
+      "id": "R",
+      "name": "屏幕右眼",
+      "contour": [
+        [
+          266,
+          213.5
+        ],
+        [
+          265.7,
+          208.5
+        ],
+        [
+          267.5,
+          205
+        ],
+        [
+          272,
+          201.4
+        ],
+        [
+          277.6,
+          199.5
+        ],
+        [
+          283.5,
+          199.8
+        ],
+        [
+          288.6,
+          202.2
+        ],
+        [
+          291.5,
+          204.8
+        ],
+        [
+          293.2,
+          207.3
+        ],
+        [
+          292.5,
+          212
+        ],
+        [
+          289.6,
+          218
+        ],
+        [
+          284.6,
+          222
+        ],
+        [
+          278.5,
+          223.6
+        ],
+        [
+          272.5,
+          221.4
+        ],
+        [
+          268.5,
+          217.7
+        ]
+      ],
+      "left": {
+        "id": "C",
+        "xy": [
+          266,
+          213.5
+        ],
+        "radius": [
+          1.5,
+          2
+        ],
+        "confidence": "low-medium",
+        "role": "内侧"
+      },
+      "right": {
+        "id": "D",
+        "xy": [
+          293.2,
+          207.3
+        ],
+        "radius": [
+          1,
+          1.3
+        ],
+        "confidence": "medium",
+        "role": "外侧"
+      },
+      "center": [
+        279.315509670691,
+        211.05309587408533
+      ],
+      "localOrigin": [
+        279.315509670691,
+        211.05309587408533
+      ],
+      "axisAngleDegrees": -12.84067901209277,
+      "localPoints": [
+        {
+          "id": "C",
+          "uv": [
+            -13.463489198234587,
+            -1.4228830593916078
+          ],
+          "commonUV": [
+            12.178298573741161,
+            -1.7540929680040445
+          ],
+          "signedDistanceToBD": -1.7540929680040485
+        },
+        {
+          "id": "D",
+          "uv": [
+            14.378981199695227,
+            0.3312099086124429
+          ],
+          "commonUV": [
+            40.020768971670975,
+            7.105427357601002e-15
+          ],
+          "signedDistanceToBD": 0
+        }
+      ],
+      "widthAlongCommonAxis": 27.842470397929812
+    }
+  ],
+  "notes": [
+    "B-D is the chosen animation coordinate reference, not a measured 3D head-roll angle.",
+    "A, B, C, D and source contours remain unchanged; A and C are not snapped to BD.",
+    "Contours include the lash edge and approximate pale lower/inner boundaries; not final aperture masks.",
+    "B and C remain visually uncertain candidates; uncertainty ellipses are not statistical confidence intervals.",
+    "Old center axis is preserved for comparison only. Its centers do not control the new BD axis.",
+    "No eye states generated or modified. Rotation applies only to diagnostic copies."
+  ]
+}
