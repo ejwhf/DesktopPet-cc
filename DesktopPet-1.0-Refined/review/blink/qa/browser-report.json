@@ -23,7 +23,7 @@
   "step": "暂停 · 第 2 / 17 帧",
   "live": {
     "uniqueFrames": 14,
-    "elapsedMs": 4304.5
+    "elapsedMs": 4315.300000011921
   },
   "svg": [
     {
@@ -87,7 +87,7 @@
   "encodedLive": {
     "webpUniqueFrames": 6,
     "gifUniqueFrames": 7,
-    "screenshotSamples": 75,
+    "screenshotSamples": 79,
     "method": "Actual painted animated image screenshots; canvas drawImage uses the default animation frame"
   },
   "pass": true
